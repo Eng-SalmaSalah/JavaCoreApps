@@ -1,0 +1,18 @@
+\b: to match word
+The backslash \ is an escape character in Java Strings. 
+That means backslash has a predefined meaning in Java. 
+You have to use double backslash \\ to define a single backslash. 
+If you want to define \b, then you must be using \\b in your regex.
+------------------------------------------------------------------------------------
+Pattern pattern=Pattern.compile("\\b"+wordToFind+"\\b");
+//convert pattern string to pattern object to match with it 
+it has no constructor,compile method is used and it is static method 
+
+Matcher matcher=pattern.matcher(inputStr);
+//matcher is a method of pattern class takes the text and returns Matcher object 
+//Matcher has methods that performs match operations on a string by comparing to a Pattern
+//a matcher is created from a pattern by invoking the pattern's matcher method.
+
+while(matcher.find())
+//matcher class has method called find
+//The find method scans the input sequence looking for the next subsequence that matches the pattern.
